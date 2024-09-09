@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Gram</title>
+  <link rel="stylesheet" href="projectgram.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Ga+Maamli&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,-25" />
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="weather.css">
+<link rel="stylesheet" href="mainprofile.css">
+<link rel="stylesheet" href="loginform.css">
+</head>
+
+<body>
+  <header id="header-content">
+    
+    <div class="logo-content">
+      <h3 id="page-title"></h3>
+      <img src="project-gram01.png" alt="logo" id="logo">
+    </div>
+
+    <nav class="list-arr">
+      <ul class="list-style">
+      <li>
+        <a href="projectgram.html">
+        <img width="26" height="26" src="https://img.icons8.com/fluency-systems-filled/48/home.png" alt="home"/>
+        <span>홈</span>
+      </a>
+    </li>
+      <li>
+        <a class="drop-link" href="#">
+        <img width="26" height="26" src="https://img.icons8.com/ios-filled/50/list.png" alt="list"/>
+        <span>목록</span>
+      </a>
+    </li>
+      <li>
+        <a class="email-modal-box" href="#">
+        <img width="26" height="26" src="https://img.icons8.com/ios-glyphs/30/speech-bubble-with-dots.png" alt="speech-bubble-with-dots"/>
+        <span>이메일</span>
+      </a>
+      
+    </li>
+      <li>
+        <a class ="profile-link" href="#">
+        <img width="26" height="26" src="https://img.icons8.com/ios-glyphs/30/test-account.png" alt="test-account"/>
+        <span>프로필</span>
+      </a>
+    </li>
+    </ul>
+    </nav>
+    
+    <div class="load-more">
+
+      <div class="load-btn">
+        <img width="26" height="26" src="https://img.icons8.com/ios-filled/50/search-more.png" alt="search-more"/>
+         <div class="add-button">
+        더 보기
+         </div>
+       </div>
+
+       <div class="add-modal-box">
+        <div class="login-box">
+          <button class="login">로그인</button>
+            <span>/</span>
+          <button class="sign-up">회원가입</button>
+          <button class="logout">로그아웃</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="drop-contain">
+      <h2 class="drop-title">목록</h2>
+      <div class="drop-list">
+        <ul class="head-ul">
+          <li class="head-li">Up Date List
+            <div>
+              <ul>
+                <li>PHP Malier : 240828</li>
+              </ul>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+  </div>
+ 
+  <div id="modal-contain">
+    <form class="mas-contain" name="emailPost" method="post">
+      <h2>이메일</h2>
+        <label for="user-email">사용자 이메일</label>
+      <input type="email" id="user-email" name="useremail" required placeholder="이메일" autocomplete="email" />
+
+      <label for="title-text">제목</label>
+      <input type="text" id="title-text" name="title" required placeholder="제목" />
+
+      <label for="mes-box">내용</label>
+      <textarea id="mes-box" name="message"></textarea>
+      
+      <input type="submit" value="전송" class="submit-btn">
+      </form>
+  </div>
+
+  <div id="profile-modal-box">
+    <div class="profile-contain">
+
+      <span class="profile-icon"></span>
+
+      <div class="introduce">
+        <h4>INTRODUCE :</h4>
+        <h5>이 웹페이지는  다양한 코드들을 연습하기 위해 만들어진 포트폴이오 페이지 입니다.</h5>
+        <p>           
+          다양한 프론트엔드 개발의 기본 개념들을 학습하며 프로젝트들을 웹페이지에 적용하며 학습과 기술의 폭을 넓혀나가는 자기개발의 시각화와 결과물들을 위해 만들어진 웹페이지입니다.       
+        </p>
+      </div>
+
+      <h3>Profile Text</h3>
+      
+       <div class="profile-text">
+        <div>
+          <h5>About Me :</h5>
+          <p>권세 / Kwon Se</p>
+          <p>1994.10.05</p>
+          <p>경북 안동 용상동</p>
+        </div>
+        <div>
+          <h5>Information :</h5>
+          <p>rnjstp48@naver.com</p>
+          <p>010-5555-4444</p>
+          <p>rnjstp48@kakao.com</p>
+        </div>
+        <div>
+          <h5>Skill :</h5>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>Java Script</p>
+          <p>PHP</p>
+          <p>React</p>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <div id="login-modal-box">
+    <form class="mas-contain" name="login" method="post" >
+      <h2>로그인</h2>
+      <label for="login-email">사용자 이메일</label>
+      <input type="email" id="login-email" name="email-id" placeholder="사용자 이메일" required autocomplete="email"/>
+      <label for="login-password">비밀번호</label>
+      <input type="password" id="login-password" name="user-pw" placeholder="사용자 비밀번호" required autocomplete="off"/>
+      <input type="submit" id="login-btn" value="로그인">
+    </form>
+    
+  </div>
+  
+  <div id="sign-modal-box">
+    <form class="mas-contain" name="signin" method="post">
+      <h2>회원가입</h2>
+      <label for="email-id">사용자 이메일</label>
+      <input type="email" id="email-id" name="email-id" placeholder="사용자 이메일" required autocomplete="email"/>
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" name="user-pw" placeholder="사용자 비밀번호"required autocomplete="off"/>
+      <label for="password2">비밀번호 확인</label>
+      <input type="password" id="password2" name="user-pw2" placeholder="사용자 비밀번호"required autocomplete="off"/>
+
+      <label for="birth-day">생년월일</label>
+      <input type="date" id="birth-day" name="user-date" min="1950-01-01" max="2024-12-31" required/>
+      <input type="submit" id="sign-btn" value="회원가입">
+    </form>
+  </div>
+  </header> 
+   
+
+  <main id="main-content">
+
+    <div class="content-feed">
+
+      <div class="stories">
+        
+        <div class="story">
+          <div class="gradation-border">
+          <div class="story-base"> 
+            <span class="material-symbols-outlined">
+            lists
+            </span>
+          </div>
+        </div>
+          <span class="story-title">1. To-Do List</span>
+        </div>
+
+        <div class="story">
+          <div class="gradation-border">
+          <div class="story-base">
+            <span class="material-symbols-outlined">
+              thermostat
+              </span>
+          </div>
+        </div>
+          <span class="story-title">2. Weather-App</span>
+      </div>
+
+        <div class="story">
+          <div class="wait-border">
+          <div class="story-base">
+            <span class="material-symbols-outlined wait-icon">
+              more_horiz
+              </span>
+          </div>
+          </div>
+            <span class="story-title">3.story</span>
+      </div>
+
+        <div class="story">
+          <div class="wait-border">
+          <div class="story-base">
+            <span class="material-symbols-outlined wait-icon">
+              more_horiz
+              </span>
+          </div>
+          </div>
+            <span class="story-title">4.story</span>
+      </div>
+
+      <div class="story">
+       <div class="wait-border">
+        <div class="story-base">
+          <span class="material-symbols-outlined wait-icon">
+            more_horiz
+            </span>
+        </div>
+        </div>
+          <span class="story-title">5.story</span>
+    </div>
+
+    <div class="story">
+     <div class="wait-border">
+      <div class="story-base">
+        <span class="material-symbols-outlined wait-icon">
+          more_horiz
+          </span>
+      </div>
+      </div>
+        <span class="story-title">6.story </span>
+    </div>
+
+      </div>
+
+      <div class="posts">
+
+        <div class="post to-do-list">
+         <div class="top-section">
+          
+          <div class="gradation-border"> 
+          <div class="story-base">
+            <span class="material-symbols-outlined">
+              lists
+              </span>
+          </div>
+        </div>
+          <div class="top-section-title">
+            <h3 class="todolist-title">1.To-Do List</h3>
+            <p>Vanilla JavaScript</p>
+          </div>
+         </div>
+
+         <div class="middle-section">
+
+          <div class="todo-list">
+              <h1 class="title">To-Do List</h1>
+              
+              <div class="input-box">
+                <input type="text" id="input-tag" placeholder="to do list">
+                <button class="todo-btn">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+
+          <div class="list-section">
+              <ul id="todo-list-tag"></ul>
+            </div>
+
+          </div>
+          
+         </div>
+
+         <div class="bottom-section">
+          <div>
+            <span class="tail-text">Intorduce To : </span>
+            <div class="tail-box">
+              <p>이 프로젝트는 단순한 할 일 목록 관리 기능을 제공하지만, 
+                그 안에는 중요한 웹 개발 개념들이 반영되어 있습니다. 
+                <br>
+                이벤트 위임과 DOM 조작을 통해 효율적인 코드 작성을 실현하기위해 노력 하였고,  
+                사용자 인터랙션을 고려한 설계로 UI/UX 최적화에맞게 변화중이며, 
+                코드의 유지보수성과 확장성을 염두에 두고 작성되었습니다.</p>
+            </div>
+          </div>
+          
+          <div>
+            <span class="tail-text">Change In Direction : </span>
+          <div class="tail-box">
+            <p>앞으로는 비동기 통신을 통해 외부 데이터를 처리하는 방법과
+              로컬 스토리지를 활용하여 데이터를 저장하고,<br> 
+              상태 관리 라이브러리를 도입하여 더 나은 상태 관리 방법을 탐구할 예정입니다. 
+              </p>
+          </div>
+          </div>
+          
+         </div>
+        </div>
+
+        <div class="post weather-app">
+          <div class="top-section">
+            <div class="gradation-border">
+            <div class="story-base">
+              <span class="material-symbols-outlined">
+                thermostat
+                </span>
+            </div>
+          </div>
+          <div class="top-section-title">
+            <h3 class="todolist-title">2.Weather-App</h3>
+            <p>Open Weather Map API</p>
+          </div>
+          </div>
+  
+          <div class="middle-section">
+
+            <div class="weather-app-contain">
+              <h1 class="title">Weather-App</h1>
+              <div class="weather-box">
+                <input type="text" id="city" placeholder="city search">
+                <button id="weather-btn">
+                <span></span>
+                <span></span>
+              </button>
+              </div>
+            </div>
+
+            <div class="weather-info">
+
+              <div class="weather-info-main">
+                <p class="weather-notice">찾고자 하시는 도시와 나라의 이름을 영어로 검색해 주세요...</p>
+                <span class="material-symbols-outlined weather-icon animate">
+                  manage_search
+                  </span>  
+                  <p class="temperature">16 <span>℃</span></p>
+                  <p class="description">날씨 : <span>좋음</span></p>
+              </div>
+
+              <div class="weather-info-sub">
+
+                <div class="humidity">
+                  <span class="material-symbols-outlined">
+                    humidity_percentage
+                    </span>
+                    <div class="info-humidity">
+                      <span>0%</span>
+                      <p>습도</p>
+                    </div>
+                </div>
+
+                <div class="wind">
+                  <span class="material-symbols-outlined">
+                    air            
+                    </span>
+
+                    <div class="info-wind">
+                      <span>0Km/h</span>
+                      <p>풍량</p>
+                    </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+  
+          <div class="bottom-section">
+            <div>
+              <span class="tail-text">Intorduce To : </span>
+              <div class="tail-box">
+                <p>이 프로젝트는 사용자에게 날씨 정보를 제공하는 웹 애플리케이션입니다. 
+                  사용자는 도시 이름을 입력하고 날씨 검색 버튼을 클릭하여 해당 도시의 현재 날씨 정보를 확인할 수 있습니다.
+                   이 애플리케이션은 OpenWeatherMap API를 사용하여 실시간 날씨 데이터를 가져오고, 
+                   이를 사용자에게 시각적으로 표시합니다.</p>
+              </div>
+            </div>
+            <div>
+              <span class="tail-text">Change In Direction : </span>
+            <div class="tail-box">
+              <p>에러 처리 개선과 사용자 경험 향상을 포함해 주간 예보 및 기상 알림 기능을 추가하여 사용자에게 더 유용한 정보를 제공하겠습니다.
+                반응형 디자인을 통해 다양한 화면 크기에 맞춘 최적화와 성능 개선을 실현하고,
+                 접근성 향상 및 한국어 지원을 통해 사용자들에게도 편리한 사용 환경을 제공하겠습니다.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="footer-content">
+
+    <div class="profile-feed">
+
+      <div class="mini-profile">
+      <div class="gradation-border">
+        <div class="story-base">
+          <span class="material-symbols-outlined">
+           person
+            </span>
+        </div>
+      </div>
+        <div class="top-section-title">
+          <h3>Project Web Page</h3>
+          <a href="javascript:void(0)" onclick="profileModalOpen(event);"class="mini-profile-link">
+            <span class="material-symbols-outlined">
+            link
+            </span >
+           <span class="link-tag">
+            프로필
+           </span>
+          </a>       
+        </div>
+      </div>
+
+      <div class="profile-list">
+        <ul>
+          <li>
+            <a href="javascript:void(0)" onclick="linkAlert();">
+            <span class="material-symbols-outlined">
+              link
+              </span>
+             <span class="link-tag"> 블로그</span>
+            </a>
+            </li>
+
+          <li><a href="javascript:void(0)" onclick="linkAlert();">
+            <span class="material-symbols-outlined">
+              link
+              </span>
+              <span class="link-tag">Git Hub</span> 
+            </a>
+            </li>
+
+          <li>
+            <a href="javascript:void(0)" onclick="linkAlert();">
+            <span class="material-symbols-outlined">
+              link
+              </span>
+               <span class="link-tag">intargram</span>
+            </a>
+            </li>
+
+        </ul>
+      </div>
+
+    </div>
+    <div class="icon-link">
+      <a  href="https://icons8.com/icon/1iF9PyJ2Thzo/home">Home</a> icon by <a href="https://icons8.com">Icons8</a>
+      <a  href="https://icons8.com/icon/8800/명부">명부</a> icon by <a href="https://icons8.com">Icons8</a>
+      <a  href="https://icons8.com/icon/61637/점과-연설-거품">점과 연설 거품</a> icon by <a href="https://icons8.com">Icons8</a>
+      <a  href="https://icons8.com/icon/NjOjDSZRU0Ma/테스트-계정">테스트 계정</a> icon by <a href="https://icons8.com">Icons8</a>
+      <a  href="https://icons8.com/icon/123400/더보기">더보기</a> icon by <a href="https://icons8.com">Icons8</a>
+    </div>
+
+  </footer>
+  
+  <script src="header.js"></script>
+  <script src="loginform.js"></script>
+  <script src="main.js"></script>
+  <script src="weather.js"></script>
+  <script src="footer.js"></script>
+  
+</body>
+</html>
